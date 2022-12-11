@@ -14,22 +14,28 @@ body {
     background-color: #353D4D;
     font-family: 'Poppins', sans-serif;
     display: flex;
+    flex-direction: column;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
 }
 input, textarea, button {font-family: inherit;}
+.widget-title {
+    color: #fff;
+    padding: 1.5rem 0;
+    font-weight: 400;
+    font-size: 2rem;
+}
 .widget-wrap {
     width: 30rem;
     max-width: 100%;
     position: relative;
 }
-
 .widget-head {
     width: 100%;
     min-height: 6.25rem;
     border-radius: 1.875rem;
-    background: linear-gradient(#24ade8 0%, #8118cc 100%);
+    background: linear-gradient(160deg, #24ade8 0%, #8118cc 100%);
     box-shadow: 0.1875rem 0.625rem 0.9375rem rgba(0, 0, 0, 0.16);
     padding: 1.25rem;
 }
@@ -95,10 +101,10 @@ input, textarea, button {font-family: inherit;}
     min-height: 50px;
     border-radius: 1.875rem;
     margin-top: 1rem;
-    background: linear-gradient(#24ade8 0%, #8118cc 100%);
+    background: linear-gradient(160deg,#24ade8 0%, #8118cc 100%);
     box-shadow: 0.1875rem 0.625rem 0.9375rem rgba(0, 0, 0, 0.16);       
-    padding: 1.25rem;
-    color: #fff;
+    padding: 0.5rem 1.3rem;
+    color: #fcfcfc;
     position: relative;
 }
 .widget-card-close {
@@ -109,8 +115,8 @@ input, textarea, button {font-family: inherit;}
     box-shadow: 0.1875rem 0.625rem 0.9375rem rgba(0, 0, 0, 0.16);
     border: none;
     position: absolute;
-    top: 30px;
-    right: 30px;
+    top: 20px;
+    right: 20px;
 }
 .widget-card-close:hover {
     background-color: #333;
@@ -127,14 +133,18 @@ input, textarea, button {font-family: inherit;}
     padding: 0;
 }
 .widget-card .text-sm {
-    font-size: 1rem;
+    font-size: 0.9rem;
     font-weight: 300;
     padding: 0.3rem 0 ;
 }
 .widget-card .text-sm.alt {
     font-weight: 500;
 }
-
+.widget-card .text-des {
+    font-size: 0.9rem;
+    font-weight: 300;
+    font-style: italic;
+}
 .widget-data {
     display: flex;
     flex-wrap: wrap;
@@ -152,6 +162,10 @@ input, textarea, button {font-family: inherit;}
     padding: 1rem;
 }
 .main-data {
+    padding: 1.3rem 0;
+}
+.widget-error {
+    width: 100%;
     padding: 1rem 0;
 }
 @media(max-width: 480px) {
