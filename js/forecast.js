@@ -9,8 +9,8 @@ const getWeatherByCity = async (city) => {
     return data;
 }
 
-const getWeatherByLoc = async (lat, lon) => {
-    const query = `?lat=${lat}&lon=${lon}&appid=${key}&units=metric`;
+const getWeatherByLoc = async (coords) => {
+    const query = `?lat=${coords.latitude}&lon=${coords.longitude}&appid=${key}&units=metric`;
     const response = await fetch(base + query);
     const data = await response.json();
     return data;

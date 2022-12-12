@@ -164,9 +164,13 @@ input, textarea, button {font-family: inherit;}
 .main-data {
     padding: 1.3rem 0;
 }
-.widget-error {
+.widget-message {
     width: 100%;
     padding: 1rem 0;
+}
+.widget-message .icon-wait {
+    width: 100px;
+    margin: 0 auto;
 }
 @media(max-width: 480px) {
   

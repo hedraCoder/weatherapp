@@ -1,4 +1,4 @@
-function getPosition() {
+const getPosition = () => {
 
     return new Promise((resolve, reject) => {
    
@@ -9,7 +9,7 @@ function getPosition() {
       }
   
       function success(position) {
-        resolve(position)
+        resolve(position);
       }
   
       function error(error) {
@@ -19,10 +19,7 @@ function getPosition() {
     });
   
   };
+
+
   
-getPosition().then((position)=> {
-    console.log(position);
-})
-.catch((error)=> {
-    console.log(error.message);
-})
+
