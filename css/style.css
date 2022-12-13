@@ -27,7 +27,7 @@ input, textarea, button {font-family: inherit;}
     font-size: 2rem;
 }
 .widget-wrap {
-    width: 30rem;
+    width: 34rem;
     max-width: 100%;
     position: relative;
 }
@@ -128,7 +128,7 @@ input, textarea, button {font-family: inherit;}
     margin: 0.3rem 0;
 }
 .widget-card .text-lg {
-    font-size: 2rem;
+    font-size: 1.8rem;
     font-weight: 400;
     padding: 0;
 }
@@ -148,13 +148,15 @@ input, textarea, button {font-family: inherit;}
 .widget-data {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
 }
 .widget-data-left {
-    padding: 1rem 0;
-    min-width: 50%;
+    max-width: 50%;
+    padding: 1rem 0;    
 }
 .widget-data-right {
-    min-width: 50%;
+    width: 50%;
+    max-width: 50%;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -169,8 +171,12 @@ input, textarea, button {font-family: inherit;}
     padding: 1rem 0;
 }
 .widget-message .icon-wait {
-    width: 100px;
+    width: 80px;
     margin: 0 auto;
+    animation: spin infinite 1s ease-in-out;
+}
+.d-none {
+    display: none;
 }
 @media(max-width: 480px) {
   
@@ -181,6 +187,7 @@ input, textarea, button {font-family: inherit;}
     .widget-data-left,
     .widget-data-right {
         width: 100%;
+        max-width: 100%;
         text-align: center;
     }
     .widget-data-left {
@@ -198,5 +205,24 @@ input, textarea, button {font-family: inherit;}
     .widget-data-right {
         width: 100%;
         text-align: center;
+    }
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(90deg)
+    }
+
+    50% {
+        transform: rotate(180deg)
+    }
+    75% {
+        transform: rotate(270deg)
+    }
+   100% {
+        transform: rotate(360deg);
     }
 }
