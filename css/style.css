@@ -12,11 +12,11 @@ html {
 body {
     min-height: 100vh;
     background-color: #353D4D;
+    padding: 5rem 2rem;
     font-family: 'Poppins', sans-serif;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-    justify-content: center;
     align-items: center;
 }
 input, textarea, button {font-family: inherit;}
@@ -180,18 +180,25 @@ input, textarea, button {font-family: inherit;}
 }
 @media(max-width: 480px) {
   
+    body {
+        padding: 0;
+    }
     .widget-wrap {
         width: 340px;
         padding: 1.875rem 0;
     }
-    .widget-data-left,
-    .widget-data-right {
+    .widget-data-left {
         width: 100%;
         max-width: 100%;
         text-align: center;
     }
     .widget-data-left {
         order: 1;
+    }
+    .widget-data-right {
+        max-width: 50%;
+        margin: 0 auto;
+        text-align: center;
     }
     
 }
@@ -200,11 +207,6 @@ input, textarea, button {font-family: inherit;}
     .widget-wrap {
         width: 300px;
         padding: 1.875rem 0;
-    }
-    .widget-data-left,
-    .widget-data-right {
-        width: 100%;
-        text-align: center;
     }
 }
 
