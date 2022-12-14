@@ -53,7 +53,7 @@ const updateUI = (data) => {
 
 
     widget.innerHTML = `<div class="widget-data-left">
-        <p class="text-sm alt"><i class="fa fa-map-marker-alt"></i> ${data.name}</p>
+        <p class="text-sm alt"><i class="fa fa-map-marker-alt"></i> ${data.name}, ${data.sys.country}</p>
         <p class="text-sm"><i class="fa fa-calendar-alt"></i> ${timeDets.date}</p>
         <p class="text-sm"><i class="far fa-clock"></i> ${timeDets.time}</p>
         <div class="main-data">
@@ -82,7 +82,6 @@ const processWeatherReq = async (info) => {
         try {
             const data = await getWeatherByCity(info);
             updateUI(data);
-            console.log(data);
         }
         catch(error) {
             widget.innerHTML = `<div class="widget-message text-center">                    
@@ -99,7 +98,12 @@ const processWeatherReq = async (info) => {
             updateUI(data);
         }
         catch(error) {
-            console.log(error.message)
+            widget.innerHTML = `<div class="widget-message text-center">                    
+            <div class="icon">
+                <img src="assets/icons/error-icon.svg" alt="error">
+            </div>
+            <p class="text-lg">Oops...</p>
+           <p class="text-sm">${error.message}</p>`;
         }
       }  
 }
